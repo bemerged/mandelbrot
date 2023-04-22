@@ -1,6 +1,6 @@
 ﻿namespace Mandelbrot
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btn_calc = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btn_calc
+            // 
+            this.btn_calc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_calc.Location = new System.Drawing.Point(0, 465);
+            this.btn_calc.Name = "btn_calc";
+            this.btn_calc.Size = new System.Drawing.Size(817, 23);
+            this.btn_calc.TabIndex = 0;
+            this.btn_calc.Text = "Calculate";
+            this.btn_calc.UseVisualStyleBackColor = true;
+            this.btn_calc.Click += new System.EventHandler(this.btn_calc_Click);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(817, 488);
+            this.Controls.Add(this.btn_calc);
+            this.Name = "MainForm";
             this.Text = "Form1";
+            this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Button btn_calc;
     }
 }
